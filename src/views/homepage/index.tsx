@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { useTranslation } from "next-i18next";
 import Metatags from "../../components/metatags";
 import { metatags } from "../../components/metatags/metatags";
+import Hero from "../../components/hero";
 
 export const Homepage: FC = () => {
   const { t, i18n } = useTranslation("common");
@@ -15,7 +16,8 @@ export const Homepage: FC = () => {
         description={metatags.index[activeLanguage].description}
         keywords={metatags.index[activeLanguage].keywords}
       />
-      <h1>Hello World!</h1>
+      <Hero />
+      <div style={{ height: "100rem" }}></div>
     </>
   );
 };

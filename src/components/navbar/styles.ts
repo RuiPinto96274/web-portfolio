@@ -4,11 +4,12 @@ import { styled } from "styled-components";
 
 export const StyledNavbar = styled(Navbar)`
   background-color: ${(props) => props.theme.colors.navColor};
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.1);
   height: 90px;
   width: 100%;
-  padding: 0 5%;
   position: fixed;
-
+  top: 0;
+  z-index: 100;
   .white {
     color: white;
   }
@@ -23,14 +24,24 @@ export const StyledOffcanvas = styled(Navbar.Offcanvas)`
   }
 `;
 interface NavLinkProps {
-  isOffcanvasOpen: boolean;
+  isOpen: boolean;
 }
 export const NavLink = styled(Nav.Link)<NavLinkProps>`
   margin-left: 4rem;
   position: relative;
-  font-size: ${(props) => (props.isOffcanvasOpen ? "25px" : "16px")};
-  margin-bottom: ${(props) => (props.isOffcanvasOpen ? "1rem" : "")};
-  margin-left: ${(props) => (props.isOffcanvasOpen ? "1.5rem" : "")};
+  font-size: 16px;
+
+  ${(props) =>
+    props.isOpen &&
+    `
+      font-size: 25px;
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+    `}
+
+  &.active {
+    color: white !important;
+  }
   &:hover::after {
     content: "";
     position: absolute;

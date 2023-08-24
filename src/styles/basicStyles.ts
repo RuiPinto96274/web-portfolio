@@ -21,9 +21,10 @@ export const BasicStyles = createGlobalStyle`
 
   body {
     font-family: 'Outfit' !important;
-    color: ${({ theme }) => theme.colors.black} !important;
+    color: ${({ theme }) => theme.colors.white} !important;
     font-size: 16px !important;
     font-weight: 400 !important;
+    padding-top: 90px;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -56,10 +57,4 @@ export const BasicStyles = createGlobalStyle`
 export const AppContainer = styled.div`
   width: 100%;
   background-color: #ffffff;
-`;
-
-export const ViewContainer = styled.div`
-  width: 100%;
-  max-width: 1038px;
-  margin: auto;
 `;
