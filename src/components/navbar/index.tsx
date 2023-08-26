@@ -14,21 +14,42 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 const NavTop = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrolltoHash = function (element_id: string) {
+    const element = document.getElementById(element_id);
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollAndClose = (hash: string) => {
+    scrolltoHash(hash);
+    setIsOpen(false);
+  };
+
   return (
     <>
       <StyledNavbar expand="lg">
         <Container fluid="md">
-          <Navbar.Brand href="#home" className="white">
+          <Navbar.Brand
+            onClick={() => scrolltoHash("hello")}
+            className="white"
+            style={{ cursor: "pointer" }}
+          >
             <GreenText>&lt;</GreenText> R<GreenText>UI</GreenText> PINTO{" "}
             <GreenText>/&gt;</GreenText>
           </Navbar.Brand>
-          <NavbarToggle aria-controls="offcanvasNavbar-expand-lg" />
+          <NavbarToggle
+            aria-controls="offcanvasNavbar-expand-lg"
+            onClick={() => setIsOpen(true)}
+          />
           <StyledOffcanvas
             id="offcanvasNavbar-expand-lg"
             aria-labelledby="offcanvasNavbarLabel-expand-lg"
             placement="end"
             onHide={() => setIsOpen(false)}
             onShow={() => setIsOpen(true)}
+            show={isOpen}
           >
             <Offcanvas.Header
               closeButton
@@ -36,16 +57,36 @@ const NavTop = () => {
             ></Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink href="#hello" className="white" isOpen={isOpen}>
+                <NavLink
+                  as={Nav.Link}
+                  isoffcanvasopen={isOpen}
+                  className="white"
+                  onClick={() => scrollAndClose("hello")}
+                >
                   Hello
                 </NavLink>
-                <NavLink href="#about" className="white" isOpen={isOpen}>
+                <NavLink
+                  as={Nav.Link}
+                  isoffcanvasopen={isOpen}
+                  className="white"
+                  onClick={() => scrollAndClose("about")}
+                >
                   About
                 </NavLink>
-                <NavLink href="#projects" className="white" isOpen={isOpen}>
+                <NavLink
+                  as={Nav.Link}
+                  isoffcanvasopen={isOpen}
+                  className="white"
+                  onClick={() => scrollAndClose("projects")}
+                >
                   Projects
                 </NavLink>
-                <NavLink href="#contact" className="white" isOpen={isOpen}>
+                <NavLink
+                  as={Nav.Link}
+                  isoffcanvasopen={isOpen}
+                  className="white"
+                  onClick={() => scrollAndClose("contact")}
+                >
                   Contact
                 </NavLink>
               </Nav>

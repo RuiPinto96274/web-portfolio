@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   TitleDescription,
   ImageContainer,
   Section,
-  SectionTitle,
   CustomCol,
   MouseScroll,
   CustomRow,
   ButtonDiv,
+  SectionTitle,
 } from "./styles";
 import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
@@ -18,9 +18,33 @@ import TypingHeading from "../animatedheading";
 
 const headings = ["I'm Rui Pinto", "I'm a Developer"];
 
+const scrolltoHash = function (element_id: string) {
+  const element = document.getElementById(element_id);
+  element?.scrollIntoView({
+    behavior: "auto",
+  });
+};
+
 const Hero = () => {
+  const [isBigScreen, setIsBigScreen] = useState(false);
+
+  const checkScreenWidth = () => {
+    const newIsBigScreen = window.innerWidth > 767;
+    if (newIsBigScreen !== isBigScreen) {
+      setIsBigScreen(newIsBigScreen);
+    }
+  };
+
+  useEffect(() => {
+    checkScreenWidth();
+    window.addEventListener("resize", checkScreenWidth);
+    return () => {
+      window.removeEventListener("resize", checkScreenWidth);
+    };
+  }, [isBigScreen]);
+
   return (
-    <Section>
+    <Section id="hello">
       <Container fluid="md">
         <CustomRow>
           <Col className="order-md-last" md={6}>
@@ -39,7 +63,7 @@ const Hero = () => {
               <div className="mb-3">
                 <TypingHeading headings={headings} />
               </div>
-              <TitleDescription>
+              <TitleDescription className="justify">
                 A Master’s student in Engineering and Management of Information
                 Systems at the University of Minho, located in Portugal. At the
                 moment, web development is what I like to do the most in terms
@@ -49,14 +73,19 @@ const Hero = () => {
               </TitleDescription>
               <ButtonDiv className="mt-3">
                 <Custombtn text="Get my CV" />
-                <Custombtn text="Projects" />
+                <Custombtn
+                  text="Projects"
+                  onClick={() => scrolltoHash("projects")}
+                />
               </ButtonDiv>
             </div>
           </CustomCol>
         </CustomRow>
-        <div className="d-flex justify-content-center align-items-center">
-          <MouseScroll></MouseScroll>
-        </div>
+        {isBigScreen && (
+          <div className="d-flex justify-content-center align-items-center">
+            <MouseScroll></MouseScroll>
+          </div>
+        )}
       </Container>
     </Section>
   );

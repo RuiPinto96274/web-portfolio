@@ -4,6 +4,8 @@ import { useTranslation } from "next-i18next";
 import Metatags from "../../components/metatags";
 import { metatags } from "../../components/metatags/metatags";
 import Hero from "../../components/hero";
+import About from "../../components/about";
+import Projects from "../../components/projects";
 
 export const Homepage: FC = () => {
   const { t, i18n } = useTranslation("common");
@@ -17,7 +19,8 @@ export const Homepage: FC = () => {
         keywords={metatags.index[activeLanguage].keywords}
       />
       <Hero />
-      <div style={{ height: "100rem" }}></div>
+      <About />
+      <Projects />
     </>
   );
 };

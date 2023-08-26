@@ -5,7 +5,7 @@ export const CustomBtn = styled(Button)`
   background-color: transparent;
   padding: 0.5em;
   border-radius: 5px;
-  min-width: 22%;
+  min-width: 25%;
   font-size: 20px;
   margin-right: 1em;
   margin-top: 1em;

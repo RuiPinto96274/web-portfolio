@@ -5,6 +5,10 @@ import { breakpoints } from "../../styles/breakpoints";
 
 export const Section = styled.div`
   background-color: ${(props) => props.theme.colors.primaryColor};
+
+  &.padding-top {
+    padding-top: 9rem;
+  }
 `;
 
 export const CustomRow = styled(Row)`
@@ -65,9 +69,11 @@ export const TitleDescription = styled.h1`
     font-size: 18px;
   }
 
-  @media ${breakpoints.sm} {
-    text-align: justify;
-    padding: 0 5%;
+  &.justify {
+    @media ${breakpoints.sm} {
+      text-align: justify;
+      padding: 0 5%;
+    }
   }
 `;
 
@@ -78,6 +84,9 @@ export const CustomCol = styled(Col)`
 `;
 
 export const ButtonDiv = styled.div`
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
   @media ${breakpoints.sm} {
     text-align: center;
   }
@@ -87,10 +96,10 @@ export const MouseScroll = styled.div`
   @keyframes wheel {
     to {
       opacity: 0;
-      top: 60px;
+      top: 40px;
     }
   }
-  margin: 5rem;
+  margin-top: 2rem;
   width: 31px;
   height: 62px;
   border: 3px solid #26b860;
