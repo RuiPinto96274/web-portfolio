@@ -84,11 +84,13 @@ export const CustomCol = styled(Col)`
 `;
 
 export const ButtonDiv = styled.div`
-  @media (max-width: 1199px) {
-    text-align: center;
+  display: flex;
+  gap: 1rem !important;
+  @media (max-width: 1199.5px) {
+    justify-content: center;
   }
   @media ${breakpoints.sm} {
-    text-align: center;
+    justify-content: center;
   }
 `;
 

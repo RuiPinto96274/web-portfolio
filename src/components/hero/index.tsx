@@ -72,7 +72,10 @@ const Hero = () => {
                 in that area.
               </TitleDescription>
               <ButtonDiv className="mt-3">
-                <Custombtn text="Get my CV" />
+                <Custombtn
+                  text="Get my CV"
+                  openPdfInNewTab={"/assets/CV_Rui_Pinto_en.pdf"}
+                />
                 <Custombtn
                   text="Projects"
                   onClick={() => scrolltoHash("projects")}
