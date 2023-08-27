@@ -6,6 +6,7 @@ import { metatags } from "../../components/metatags/metatags";
 import Hero from "../../components/hero";
 import About from "../../components/about";
 import Projects from "../../components/projects";
+import Contact from "../../components/contact";
 
 export const Homepage: FC = () => {
   const { t, i18n } = useTranslation("common");
@@ -21,6 +22,7 @@ export const Homepage: FC = () => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </>
   );
 };

@@ -59,7 +59,7 @@ const NavTop = () => {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavLink
                   as={Nav.Link}
-                  isoffcanvasopen={isOpen}
+                  {...(isOpen ? { isoffcanvasopen: "true" } : {})}
                   className="white"
                   onClick={() => scrollAndClose("hello")}
                 >
@@ -67,7 +67,7 @@ const NavTop = () => {
                 </NavLink>
                 <NavLink
                   as={Nav.Link}
-                  isoffcanvasopen={isOpen}
+                  {...(isOpen ? { isoffcanvasopen: "true" } : {})}
                   className="white"
                   onClick={() => scrollAndClose("about")}
                 >
@@ -75,7 +75,7 @@ const NavTop = () => {
                 </NavLink>
                 <NavLink
                   as={Nav.Link}
-                  isoffcanvasopen={isOpen}
+                  {...(isOpen ? { isoffcanvasopen: "true" } : {})}
                   className="white"
                   onClick={() => scrollAndClose("projects")}
                 >
@@ -83,7 +83,7 @@ const NavTop = () => {
                 </NavLink>
                 <NavLink
                   as={Nav.Link}
-                  isoffcanvasopen={isOpen}
+                  {...(isOpen ? { isoffcanvasopen: "true" } : {})}
                   className="white"
                   onClick={() => scrollAndClose("contact")}
                 >

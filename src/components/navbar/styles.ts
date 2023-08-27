@@ -24,7 +24,7 @@ export const StyledOffcanvas = styled(Navbar.Offcanvas)`
   }
 `;
 interface NavLinkProps {
-  isoffcanvasopen: boolean;
+  isoffcanvasopen: string;
 }
 export const NavLink = styled(Nav.Link)<NavLinkProps>`
   margin-left: 4rem;
@@ -32,7 +32,7 @@ export const NavLink = styled(Nav.Link)<NavLinkProps>`
   font-size: 16px;
 
   ${(props) =>
-    props.isoffcanvasopen &&
+    props.isoffcanvasopen === "true" &&
     `
       font-size: 25px;
       margin-bottom: 1rem;

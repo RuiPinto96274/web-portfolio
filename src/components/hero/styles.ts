@@ -9,6 +9,10 @@ export const Section = styled.div`
   &.padding-top {
     padding-top: 9rem;
   }
+
+  &#contact {
+    background: ${(props) => props.theme.colors.blueGradient} !important;
+  }
 `;
 
 export const CustomRow = styled(Row)`
