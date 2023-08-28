@@ -9,6 +9,11 @@ export const FormContainer = styled.div`
   padding: 2.5rem;
   height: 38rem;
 
+  @media (max-width: 560px) {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
   @media (max-width: 300px) {
     width: 100%;
     padding: 1.5rem;
