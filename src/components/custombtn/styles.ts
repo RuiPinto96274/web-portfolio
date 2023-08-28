@@ -39,6 +39,10 @@ export const CustomBtn = styled(Button)`
     min-width: 30%;
   }
 
+  @media (max-width: 300px) {
+    min-width: 45%;
+  }
+
   &::before,
   &::after {
     content: "";

@@ -3,8 +3,8 @@ export const SecondaryColor = "#00FF66";
 export const NavColor = "#0A0718";
 export const White = "#FFF";
 export const LightGray = "#F0FFF6";
-export const BlueGradient =
-  "linear-gradient(180deg, #504EBB 0%, rgba(20, 19, 48, 0.80) 99.99%, rgba(8, 2, 29, 0.00) 100%)";
+export const PurpleGradient =
+  "linear-gradient(180deg, #504EBB 0%, #141330 100%)";
 
 export const DisabledColor = "rgba(0, 0, 0, 0.3)";
 export const ErrorColor = "#DD425A";
@@ -17,7 +17,7 @@ export const colors: any = {
   navColor: NavColor,
   white: White,
   lightGray: LightGray,
-  blueGradient: BlueGradient,
+  purpleGradient: PurpleGradient,
   disabledColor: DisabledColor,
   errorColor: ErrorColor,
   placeholderColor: PlaceholderColor,

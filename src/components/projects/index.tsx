@@ -80,7 +80,7 @@ const Projects = () => {
                     <Tooltip id={`tooltip-${index}`}>{icon.name}</Tooltip>
                   }
                 >
-                  <img src={icon.src} alt={icon.alt} className="me-4" />
+                  <img src={icon.src} alt={icon.alt} />
                 </OverlayTrigger>
               ))}
             </TechContainer>
@@ -121,7 +121,7 @@ const Projects = () => {
                     <Tooltip id={`tooltip-${index}`}>{icon.name}</Tooltip>
                   }
                 >
-                  <img src={icon.src} alt={icon.alt} className="me-4" />
+                  <img src={icon.src} alt={icon.alt} />
                 </OverlayTrigger>
               ))}
             </TechContainer>

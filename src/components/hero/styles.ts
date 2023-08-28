@@ -11,7 +11,8 @@ export const Section = styled.div`
   }
 
   &#contact {
-    background: ${(props) => props.theme.colors.blueGradient} !important;
+    background: ${(props) => props.theme.colors.purpleGradient} !important;
+    padding-bottom: 9rem;
   }
 `;
 

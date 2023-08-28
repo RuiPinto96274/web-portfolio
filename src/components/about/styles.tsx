@@ -44,6 +44,9 @@ export const DashedBox = styled.div`
     height: 21rem;
   }
 
+  @media (max-width: 300px) {
+    height: 33rem;
+  }
   &.justify {
     text-align: justify !important;
   }

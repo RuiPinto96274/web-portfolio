@@ -45,12 +45,24 @@ export const TechContainer = styled.div`
   display: flex;
   margin-top: 1.5rem;
 
+  img {
+    margin-right: 1.5rem;
+  }
+
   @media (max-width: 1199.5px) {
     justify-content: center;
   }
+
   @media (max-width: 1199.5px) {
     img {
       margin-left: 1.5rem;
+    }
+  }
+
+  @media (max-width: 300px) {
+    img {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
     }
   }
 `;
