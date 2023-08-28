@@ -7,9 +7,10 @@ export const FormContainer = styled.div`
   width: 80%;
   margin: 0rem auto;
   padding: 2.5rem;
-  height: 36rem;
+  height: 38rem;
 
   @media (max-width: 300px) {
+    width: 100%;
     padding: 1.5rem;
   }
 `;

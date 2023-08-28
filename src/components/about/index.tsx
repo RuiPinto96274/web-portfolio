@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <Row>
           <AboutCol md={6}>
-            <DashedBox className="justify">
+            <DashedBox>
               <ContentDiv>
                 <TitleAbout>Professional experience</TitleAbout>
                 <div className="d-flex justify-content-between align-items-center mt-2">
@@ -36,7 +36,7 @@ const About = () => {
                   <CustomSpan>Braga, Portugal</CustomSpan>
                   <CustomSpan>Jul 2023 - Aug 2023</CustomSpan>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3" style={{ textAlign: "justify" }}>
                   <CustomSpan>
                     I held the position of Web Developer, with the goal of
                     creating a landing page for Codepoint's new product, Klatch.
@@ -49,7 +49,7 @@ const About = () => {
             </DashedBox>
           </AboutCol>
           <AboutCol md={6}>
-            <DashedBox className="justify">
+            <DashedBox>
               <ContentDiv>
                 <TitleAbout>Education</TitleAbout>
                 <div className="d-flex justify-content-space-between align-items-center mt-2">
@@ -62,7 +62,7 @@ const About = () => {
                   <CustomSpan>University of Minho</CustomSpan>
                   <CustomSpan>Oct 2020 - Jun 2023</CustomSpan>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3" style={{ textAlign: "justify" }}>
                   <CustomSpan>
                     During my time in university, which lasted for three years,
                     I got the hang of several programming languages. Although

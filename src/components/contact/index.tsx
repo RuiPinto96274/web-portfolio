@@ -12,7 +12,7 @@ const Contact = () => {
         <div className="text-center d-flex justify-content-center align-items-center flex-column">
           <SectionTitle>CONTACT</SectionTitle>
           <CustomHr />
-          <TitleDescription className="pb-5 pe-5 ps-5">
+          <TitleDescription className="pb-5">
             Connecting is easy – fill out the contact form, and I'll be in
             touch!
           </TitleDescription>

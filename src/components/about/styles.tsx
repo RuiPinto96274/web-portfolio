@@ -37,6 +37,7 @@ export const DashedBox = styled.div`
     margin: 0 auto;
   }
   @media ${breakpoints.xs} {
+    padding: 20px 25px;
     height: 18rem;
   }
 
@@ -44,11 +45,13 @@ export const DashedBox = styled.div`
     height: 21rem;
   }
 
-  @media (max-width: 300px) {
-    height: 33rem;
+  @media (max-width: 380px) {
+    padding: 20px 15px;
+    height: 25rem;
   }
-  &.justify {
-    text-align: justify !important;
+
+  @media (max-width: 300px) {
+    height: 28rem;
   }
 `;
 
@@ -69,6 +72,7 @@ export const TitleAbout = styled.h3`
 
 export const SecondaryAbout = styled.span`
   font-size: 18px !important;
+  font-weight: 500 !important;
 
   @media ${breakpoints.md} {
     font-size: 16px !important;

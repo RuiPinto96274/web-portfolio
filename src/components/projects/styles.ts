@@ -59,7 +59,7 @@ export const TechContainer = styled.div`
     }
   }
 
-  @media (max-width: 300px) {
+  @media (max-width: 450px) {
     img {
       margin-right: 0.5rem;
       margin-left: 0.5rem;

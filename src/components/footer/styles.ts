@@ -65,6 +65,11 @@ export const SocialContainer = styled.div`
       margin-left: 0.1rem;
       margin-right: 0.1rem;
     }
+
+    @media (max-width: 300px) {
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+    }
   }
 `;
 
@@ -79,7 +84,7 @@ export const Copyright = styled.div`
 export const SocialDiv = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 3rem;
 

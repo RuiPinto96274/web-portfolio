@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {
   GreenText,
   NavLink,
+  NavbarBrand,
   NavbarToggle,
   StyledNavbar,
   StyledOffcanvas,
@@ -31,14 +32,14 @@ const NavTop = () => {
     <>
       <StyledNavbar expand="lg">
         <Container fluid="md">
-          <Navbar.Brand
+          <NavbarBrand
             onClick={() => scrolltoHash("hello")}
             className="white"
             style={{ cursor: "pointer" }}
           >
             <GreenText>&lt;</GreenText> R<GreenText>UI</GreenText> PINTO{" "}
             <GreenText>/&gt;</GreenText>
-          </Navbar.Brand>
+          </NavbarBrand>
           <NavbarToggle
             aria-controls="offcanvasNavbar-expand-lg"
             onClick={() => setIsOpen(true)}
