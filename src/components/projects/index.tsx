@@ -35,10 +35,7 @@ const Projects = () => {
           <RowPadding key={index}>
             <Col xl={6}>
               <ImageContainer>
-                <img
-                  src="/assets/images/laptop_klatch.png"
-                  alt="laptop klatch"
-                />
+                <img src={project.srcImage} alt={project.altImage} />
               </ImageContainer>
             </Col>
             <Col xl={6} className="mt-4">
