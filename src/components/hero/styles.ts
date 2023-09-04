@@ -12,7 +12,6 @@ export const Section = styled.div`
 
   &#contact {
     background: ${(props) => props.theme.colors.purpleGradient} !important;
-    padding-top: 5rem;
     padding-bottom: 9rem;
   }
 `;

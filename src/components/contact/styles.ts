@@ -19,3 +19,8 @@ export const FormContainer = styled.div`
     padding: 1.5rem;
   }
 `;
+
+export const ContactDetails = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+`;

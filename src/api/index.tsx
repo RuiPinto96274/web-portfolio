@@ -31,8 +31,16 @@ const ContactForm = () => {
       setNameError("");
     }
 
+    const isValidEmail = (email: any) => {
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailRegex.test(email);
+    };
+
     if (!formData.get("email")) {
       setEmailError("Please provide your email.");
+      return;
+    } else if (!isValidEmail(formData.get("email"))) {
+      setEmailError("Please enter a valid email format.");
       return;
     } else {
       setEmailError("");

@@ -17,34 +17,7 @@ import {
 } from "./styles";
 import Custombtn from "../custombtn";
 import Tooltip from "react-bootstrap/Tooltip";
-
-const iconsKlatch = [
-  { src: "/assets/icons/gitlab.svg", alt: "gitlab icon", name: "GitLab" },
-  { src: "/assets/icons/nextjs.svg", alt: "next.js icon", name: "Next.js" },
-  { src: "/assets/icons/react.svg", alt: "react icon", name: "React" },
-  { src: "/assets/icons/mantine.svg", alt: "mantine icon", name: "Mantine" },
-  {
-    src: "/assets/icons/typescript.svg",
-    alt: "typescript icon",
-    name: "TypeScript",
-  },
-];
-
-const iconsPortfolio = [
-  { src: "/assets/icons/github.svg", alt: "github icon", name: "GitHub" },
-  { src: "/assets/icons/nextjs.svg", alt: "next.js icon", name: "Next.js" },
-  { src: "/assets/icons/react.svg", alt: "react icon", name: "React" },
-  {
-    src: "/assets/icons/typescript.svg",
-    alt: "typescript icon",
-    name: "TypeScript",
-  },
-  {
-    src: "/assets/icons/bootstrap.svg",
-    alt: "bootstrap icon",
-    name: "Bootstrap",
-  },
-];
+import { projectsData } from "../../projects_data";
 
 const Projects = () => {
   return (
@@ -58,78 +31,44 @@ const Projects = () => {
             done
           </TitleDescription>
         </div>
-        <RowPadding>
-          <Col xl={6}>
-            <ImageContainer>
-              <img src="/assets/images/laptop_klatch.png" alt="laptop klatch" />
-            </ImageContainer>
-          </Col>
-          <Col xl={6} className="mt-4">
-            <TitleProject>Klatch.</TitleProject>
-            <DescriptionProject className="mt-4">
-              Klatch is a service for creating and managing events in a
-              personalized way to suit different types of events.
-            </DescriptionProject>
-            <TitleTech className="mt-4">Tech Stack</TitleTech>
-            <TechContainer>
-              {iconsKlatch.map((icon, index) => (
-                <OverlayTrigger
-                  key={index}
-                  placement="top"
-                  overlay={
-                    <Tooltip id={`tooltip-${index}`}>{icon.name}</Tooltip>
-                  }
-                >
-                  <img src={icon.src} alt={icon.alt} />
-                </OverlayTrigger>
-              ))}
-            </TechContainer>
-            <ButtonDiv className="mt-3">
-              <Custombtn
-                text="Case Study"
-                onClick={() =>
-                  window.open(
-                    "https://codepoint.pt/work/klatch-landing-page-2023"
-                  )
-                }
-              />
-            </ButtonDiv>
-          </Col>
-        </RowPadding>
-        <RowPadding>
-          <Col xl={6}>
-            <ImageContainer>
-              <img
-                src="/assets/images/laptop_portfolio.png"
-                alt="laptop portfolio"
-              />
-            </ImageContainer>
-          </Col>
-          <Col xl={6} className="mt-4">
-            <TitleProject>Portfolio</TitleProject>
-            <DescriptionProject className="mt-4">
-              Personal Portfolio where you can get to know me and the work i
-              have done.
-            </DescriptionProject>
-            <TitleTech className="mt-4">Tech Stack</TitleTech>
-            <TechContainer>
-              {iconsPortfolio.map((icon, index) => (
-                <OverlayTrigger
-                  key={index}
-                  placement="top"
-                  overlay={
-                    <Tooltip id={`tooltip-${index}`}>{icon.name}</Tooltip>
-                  }
-                >
-                  <img src={icon.src} alt={icon.alt} />
-                </OverlayTrigger>
-              ))}
-            </TechContainer>
-            <ButtonDiv className="mt-3">
-              <Custombtn text="Launch" />
-            </ButtonDiv>
-          </Col>
-        </RowPadding>
+        {projectsData.map((project, index) => (
+          <RowPadding key={index}>
+            <Col xl={6}>
+              <ImageContainer>
+                <img
+                  src="/assets/images/laptop_klatch.png"
+                  alt="laptop klatch"
+                />
+              </ImageContainer>
+            </Col>
+            <Col xl={6} className="mt-4">
+              <TitleProject>{project.title}</TitleProject>
+              <DescriptionProject className="mt-4">
+                {project.description}
+              </DescriptionProject>
+              <TitleTech className="mt-4">Tech Stack</TitleTech>
+              <TechContainer>
+                {project.technologies.map((tech, index) => (
+                  <OverlayTrigger
+                    key={index}
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>{tech.name}</Tooltip>
+                    }
+                  >
+                    <img src={tech.src} alt={tech.alt} />
+                  </OverlayTrigger>
+                ))}
+              </TechContainer>
+              <ButtonDiv className="mt-3">
+                <Custombtn
+                  text={project.textBtn}
+                  onClick={() => window.open(project.urlBtn)}
+                />
+              </ButtonDiv>
+            </Col>
+          </RowPadding>
+        ))}
       </Container>
     </Section>
   );
