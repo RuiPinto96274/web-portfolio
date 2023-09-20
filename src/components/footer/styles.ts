@@ -56,6 +56,13 @@ export const SocialContainer = styled.div`
     &:hover {
       transform: scale(1.2);
     }
+
+    @media (max-width: 767px) {
+      &:hover {
+        transform: scale(1);
+      }
+    }
+
     @media (max-width: 450px) {
       margin-left: 0.2rem;
       margin-right: 0.2rem;

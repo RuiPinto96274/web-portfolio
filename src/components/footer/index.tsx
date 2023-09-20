@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "../hero/styles";
-import { Container } from "react-bootstrap";
+import { Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { GreenText } from "../navbar/styles";
 import {
   Copyright,
@@ -23,14 +23,14 @@ const socialIcons = [
     url: "https://github.com/RuiPinto96274",
   },
   {
-    src: "/assets/icons/social/twitter.svg",
-    alt: "twitter icon",
-    url: "https://twitter.com/38ruimiguel",
+    src: "/assets/icons/social/mail.svg",
+    alt: "email icon",
+    name: "ruipinto2610@gmail.com",
   },
   {
-    src: "/assets/icons/social/instagram.svg",
-    alt: "instagram icon",
-    url: "https://www.instagram.com/rui.miguel2610/",
+    src: "/assets/icons/social/phonenumber.svg",
+    alt: "telephone icon",
+    name: "+351 939 026 282",
   },
 ];
 
@@ -41,6 +41,7 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <Section>
       <Container fluid="md" className="pt-5">
@@ -62,21 +63,39 @@ const Footer = () => {
           </StyledSpan>
         </div>
         <StyledHr className="mt-4" />
-
         <SocialDiv>
           <Copyright>
             © Copyright 2023. Made by <strong>Rui Pinto</strong>
           </Copyright>
           <SocialContainer>
-            {socialIcons.map((icon, index) => (
-              <img
-                key={index}
-                src={icon.src}
-                alt={icon.alt}
-                onClick={() => window.open(icon.url)}
-                style={{ cursor: "pointer" }}
-              />
-            ))}
+            {socialIcons.map((icon, index) =>
+              icon.name ? (
+                <OverlayTrigger
+                  trigger="click"
+                  rootClose={true}
+                  key={index}
+                  placement="bottom"
+                  overlay={
+                    <Tooltip id={`tooltip-${index}`}>{icon.name}</Tooltip>
+                  }
+                >
+                  <img
+                    key={index}
+                    src={icon.src}
+                    alt={icon.alt}
+                    style={{ cursor: "pointer" }}
+                  />
+                </OverlayTrigger>
+              ) : (
+                <img
+                  key={index}
+                  src={icon.src}
+                  alt={icon.alt}
+                  onClick={() => (icon.url ? window.open(icon.url) : null)}
+                  style={{ cursor: "pointer" }}
+                />
+              )
+            )}
           </SocialContainer>
         </SocialDiv>
       </Container>
