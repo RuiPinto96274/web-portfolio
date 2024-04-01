@@ -41,7 +41,7 @@ const About = () => {
                     I held the position of Web Developer, with the goal of
                     creating a landing page for Codepoint's new product, Klatch.
                     Throughout this internship, I learned and used the following
-                    technologies: React, GitLab, Next.js, Mantine, Figma,
+                    technologies: React, GitLab, Next.js, Mantine, TypeScript,
                     ClickUp, and Slack.
                   </CustomSpan>
                 </div>
