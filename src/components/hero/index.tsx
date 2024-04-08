@@ -16,7 +16,7 @@ import { GreenText } from "../navbar/styles";
 import Custombtn from "../custombtn";
 import TypingHeading from "../animatedheading";
 
-const headings = ["I'm Rui Pinto", "I'm a Developer"];
+const headings = ["I'm Rui Pinto", "Welcome aboard!"];
 
 const scrolltoHash = function (element_id: string) {
   const element = document.getElementById(element_id);
