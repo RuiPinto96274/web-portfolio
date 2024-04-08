@@ -27,8 +27,8 @@ const Projects = () => {
           <SectionTitle>PROJECTS</SectionTitle>
           <CustomHr />
           <TitleDescription className="pb-5">
-            In the section below you can see a showcase of the projects I have
-            done
+            In the section below you can see a showcase of the web projects I
+            have done
           </TitleDescription>
         </div>
         {projectsData.map((project, index) => (
@@ -58,10 +58,12 @@ const Projects = () => {
                 ))}
               </TechContainer>
               <ButtonDiv className="mt-3">
-                <Custombtn
-                  text={project.textBtn}
-                  onClick={() => window.open(project.urlBtn)}
-                />
+                {project.textBtn && project.urlBtn && (
+                  <Custombtn
+                    text={project.textBtn}
+                    onClick={() => window.open(project.urlBtn)}
+                  />
+                )}
               </ButtonDiv>
             </Col>
           </RowPadding>

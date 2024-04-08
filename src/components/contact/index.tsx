@@ -22,7 +22,7 @@ const Contact = () => {
             <strong>Email: ruipinto2610@gmail.com</strong>
           </p>
           <p>
-            <strong>Phone: +351 939026282</strong>
+            <strong>Phone: +351 939 026 282</strong>
           </p>
         </ContactDetails>
         <FormContainer>

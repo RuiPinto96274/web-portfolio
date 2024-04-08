@@ -1,11 +1,11 @@
 export const projectsData = [
   {
     id: 0,
-    title: "Klatch.",
+    title: "Klatch Landing Page",
     srcImage: "/assets/images/laptop_klatch.png",
     altImage: "laptop klatch",
     description:
-      "Klatch is a service for creating and managing events in a personalized way to suit different types of events.",
+      "A landing page to promote Codepoint's new product Klatch, which is a service for creating and managing events in a personalized way to suit different types of events.",
     technologies: [
       {
         id: 0,
@@ -43,6 +43,36 @@ export const projectsData = [
   },
   {
     id: 1,
+    title: "Art&Crafts",
+    srcImage: "/assets/images/laptop_art.png",
+    altImage: "laptop Art&Crafts",
+    description:
+      "Art&Crafts is a website I made for a project during a web programming course in my Bachelor's degree, the objective is to see informations about the available workshops and make an appointment for them. Also includes a back-office if the login is made as an admin.",
+    technologies: [
+      {
+        id: 0,
+        src: "/assets/icons/github.svg",
+        alt: "github icon",
+        name: "GitHub",
+      },
+      {
+        id: 1,
+        src: "/assets/icons/bootstrap.svg",
+        alt: "bootstrap icon",
+        name: "Bootstrap",
+      },
+      {
+        id: 2,
+        src: "/assets/icons/javascript.svg",
+        alt: "javascipt icon",
+        name: "Javascipt",
+      },
+    ],
+    textBtn: "Launch",
+    urlBtn: "https://artcrafts.netlify.app/",
+  },
+  {
+    id: 2,
     title: "Portfolio",
     srcImage: "/assets/images/laptop_portfolio.png",
     altImage: "laptop portfolio",
@@ -80,7 +110,5 @@ export const projectsData = [
         name: "Bootstrap",
       },
     ],
-    textBtn: "Launch",
-    urlBtn: "https://web-portfolio-rp.netlify.app/",
   },
 ];
