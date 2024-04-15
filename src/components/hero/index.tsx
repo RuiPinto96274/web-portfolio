@@ -64,12 +64,13 @@ const Hero = () => {
                 <TypingHeading headings={headings} />
               </div>
               <TitleDescription className="justify">
-                A Master’s student in Engineering and Management of Information
-                Systems at the University of Minho, located in Portugal. At the
-                moment, web development is what I like to do the most in terms
-                of programming, and for that reason, I’m looking for an
-                internship that allows me to acquire new skills and experience
-                in that area.
+                I'm a Master’s student in Engineering and Management of
+                Information Systems at the University of Minho, located in
+                Portugal. At the moment, I’m seeking a professional internship
+                that will allow me to acquire new skills and experience in this
+                field while completing my master's degree. My areas of interest
+                lie predominantly in Data Science, Data Engineering, and Web
+                Development.
               </TitleDescription>
               <ButtonDiv className="mt-3">
                 <Custombtn
