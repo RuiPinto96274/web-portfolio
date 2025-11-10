@@ -64,13 +64,10 @@ const Hero = () => {
                 <TypingHeading headings={headings} />
               </div>
               <TitleDescription className="justify">
-                I'm a Master’s student in Engineering and Management of
+                I'm a Machine Learning Researcher fellow and a recent Master’s graduate in Engineering and Management of
                 Information Systems at the University of Minho, located in
-                Portugal. At the moment, I’m seeking a professional internship
-                that will allow me to acquire new skills and experience in this
-                field while completing my master's degree. My areas of interest
-                lie predominantly in Data Science, Data Engineering, and Web
-                Development.
+                Portugal. At the moment, I'm searching for new opportunities in the Data Science/Machine Learning field, 
+                where I can keep delivering reliable and deployable solutions.
               </TitleDescription>
               <ButtonDiv className="mt-3">
                 <Custombtn

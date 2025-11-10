@@ -29,6 +29,55 @@ const About = () => {
               <ContentDiv>
                 <TitleAbout>Professional experience</TitleAbout>
                 <div className="d-flex justify-content-between align-items-center mt-2">
+                  <SecondaryAbout>Machine Learning Researcher</SecondaryAbout>
+                  <SecondaryAbout>CCG/Uminho</SecondaryAbout>
+                </div>
+                <div className="d-flex justify-content-between align-items-center mt-1">
+                  <CustomSpan>Guimarães, Portugal</CustomSpan>
+                  <CustomSpan>Sep 2024 - At the moment</CustomSpan>
+                </div>
+                <div className="mt-3" style={{ textAlign: "justify" }}>
+                  <CustomSpan>
+                    Currently contributing to the Produtech R3 consortium by developing production-ready
+                    training and inference APIs with the goal of detecting anomalies in real-world industrial machines.
+                    I collaborate closely with industry partners to translate domain requirements into robust ML solutions. 
+                    Teck Stack: H2OAutoML, XGBoost, Tensorflow, Docker, MLflow, FastAPI, Redis Queue, Keycloak, Git.
+                  </CustomSpan>
+                </div>
+              </ContentDiv>
+            </DashedBox>
+          </AboutCol>
+          <AboutCol md={6}>
+            <DashedBox>
+              <ContentDiv>
+                <TitleAbout>Education</TitleAbout>
+                <div className="d-flex justify-content-space-between align-items-center mt-2">
+                  <SecondaryAbout>
+                    Master’s in Engineering and Management of Information
+                    Systems
+                  </SecondaryAbout>
+                </div>
+                <div className="d-flex justify-content-between align-items-center mt-1">
+                  <CustomSpan>University of Minho</CustomSpan>
+                  <CustomSpan>Sep 2023 - Oct 2025</CustomSpan>
+                </div>
+                <div className="mt-3" style={{ textAlign: "justify" }}>
+                  <CustomSpan>
+                    During my Master's degree, I acquired a strong Machine Learning foundation
+                    by implementing ML pipelines using python libraries (e.g., scikit-learn, TensorFlow, H2OAutoML) across diverse datasets.
+                  </CustomSpan>
+                </div>
+              </ContentDiv>
+            </DashedBox>
+          </AboutCol>
+        </Row>
+
+        <Row>
+          <AboutCol md={6}>
+            <DashedBox>
+              <ContentDiv>
+                <TitleAbout>Professional experience</TitleAbout>
+                <div className="d-flex justify-content-between align-items-center mt-2">
                   <SecondaryAbout>Summer Internship</SecondaryAbout>
                   <SecondaryAbout>Codepoint.</SecondaryAbout>
                 </div>
@@ -64,8 +113,7 @@ const About = () => {
                 </div>
                 <div className="mt-3" style={{ textAlign: "justify" }}>
                   <CustomSpan>
-                    During my time in university, which lasted for three years,
-                    I got the hang of several programming languages. Although
+                    During my Bachelor's, I got the hang of several programming languages. Although
                     programming was just a part of it, i also learned what is
                     information systems and how to implement/improve them on
                     organizations.

@@ -65,7 +65,7 @@ const Footer = () => {
         <StyledHr className="mt-4" />
         <SocialDiv>
           <Copyright>
-            © Copyright 2024. Made by <strong>Rui Pinto</strong>
+            © Copyright 2025. Made by <strong>Rui Pinto</strong>
           </Copyright>
           <SocialContainer>
             {socialIcons.map((icon, index) =>
