@@ -39,8 +39,7 @@ const About = () => {
                 <div className="mt-3" style={{ textAlign: "justify" }}>
                   <CustomSpan>
                     Currently contributing to the Produtech R3 consortium by developing production-ready
-                    training and inference APIs with the goal of detecting anomalies in real-world industrial machines.
-                    I collaborate closely with industry partners to translate domain requirements into robust ML solutions. 
+                    training and inference APIs with the goal of detecting anomalies in real-world industrial machines. 
                     Teck Stack: H2OAutoML, XGBoost, Tensorflow, Docker, MLflow, FastAPI, Redis Queue, Keycloak, Git.
                   </CustomSpan>
                 </div>
@@ -72,7 +71,7 @@ const About = () => {
           </AboutCol>
         </Row>
 
-        <Row>
+        <Row className="mt-5">
           <AboutCol md={6}>
             <DashedBox>
               <ContentDiv>
